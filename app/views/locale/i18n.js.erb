@@ -1,0 +1,23 @@
+!function(exports){
+  var locale = <%= @locale.to_json %>;
+
+  function get_key(key, context){
+    var path = key.split('.');
+    while(var k = path.unshift()){
+      if(context.hasOwnProperty(k)){
+        context = context[k];
+      }
+      else{
+        throw Error('Translation missing: ' + key);
+      }
+    }
+    return context;
+  }
+
+  exports.I18n = {
+    t: function(key, options){
+      var str = get_key(key, locale);
+    }
+  }
+
+}(window);

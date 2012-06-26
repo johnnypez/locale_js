@@ -4,12 +4,12 @@ require File.expand_path('../lib/locale_js/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "locale_js"
-  gem.version       = LocaleJavaScript::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.version       = LocaleJS::VERSION
+  gem.summary       = %q{Make Rails i18n available in javascript}
+  gem.description   = %q{Make Rails i18n available in javascript}
   gem.license       = "MIT"
-  gem.authors       = ["jbutler"]
-  gem.homepage      = "https://rubygems.org/gems/locale_js"
+  gem.authors       = ["John Butler"]
+  gem.homepage      = "https://github.com/johnnypez/locale_js"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

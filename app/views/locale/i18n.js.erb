@@ -1,9 +1,9 @@
 !function(exports){
-  var locale = <%= @locale.to_json %>;
+  var locale = <%=raw @locale.to_json %>;
 
   function get_key(key, context){
-    var path = key.split('.');
-    while(var k = path.unshift()){
+    var path = key.split('.'), k = null;
+    while(k = path.shift()){
       if(context.hasOwnProperty(k)){
         context = context[k];
       }
@@ -15,8 +15,12 @@
   }
 
   exports.I18n = {
-    t: function(key, options){
+    t: function(key, context){
       var str = get_key(key, locale);
+      for(key in context){
+        str = str.replace("%{"+key+"}", context[key]);
+      }
+      return str;
     }
   }
 

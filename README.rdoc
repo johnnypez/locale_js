@@ -1,7 +1,6 @@
 = locale_js
 
-* {Homepage}[https://rubygems.org/gems/locale_js]
-* {Documentation}[http://rubydoc.info/gems/locale_js/frames]
+* {Source}[http://github.com/johnnypez/locale_js]
 
 == Description
 
@@ -19,8 +18,26 @@ TODO: Description
 
   $ gem install locale_js
 
+  then add this to your application layout
+
+  <script src="/locale/<%= I18n.locale %>.js"></script>
+
+  Populate your locale file as normal..
+
+  en:
+    hello: "Hello World"
+    foo: "%{foo} test"
+
+  You can then translate strings in your JS just like I18n...
+
+  I18n.t('hello')
+  => 'Hello World'
+
+  I18n.t('foo', {foo: 'bar'})
+  => 'bar test'
+
 == Copyright
 
-Copyright (c) 2012 jbutler
+Copyright (c) 2012 John Butler
 
 See LICENSE.txt for details.

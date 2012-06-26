@@ -1,0 +1,26 @@
+= locale_js
+
+* {Homepage}[https://rubygems.org/gems/locale_js]
+* {Documentation}[http://rubydoc.info/gems/locale_js/frames]
+
+== Description
+
+TODO: Description
+
+== Features
+
+== Examples
+
+  require 'locale_js'
+
+== Requirements
+
+== Install
+
+  $ gem install locale_js
+
+== Copyright
+
+Copyright (c) 2012 jbutler
+
+See LICENSE.txt for details.

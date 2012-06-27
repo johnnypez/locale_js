@@ -1,8 +1,4 @@
-= locale_js
-
-* {Source}[http://github.com/johnnypez/locale_js]
-
-== Description
+== Locale JS
 
   A fairly simple rails engine that takes your Rails locale and makes it available
   in your Javascript.
@@ -30,6 +26,8 @@
   => 'bar test'
 
 == Requirements
+  
+  Rails 3.0 or greater
 
 == Install
   

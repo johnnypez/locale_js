@@ -4,21 +4,14 @@
 
 == Description
 
-TODO: Description
-
-== Features
+  A fairly simple rails engine that takes your Rails locale and makes it available
+  in your Javascript.
+  All you have to do is add this to your Gemfile and include the javascript locale in
+  your page.
 
 == Examples
 
-  require 'locale_js'
-
-== Requirements
-
-== Install
-
-  $ gem install locale_js
-
-  then add this to your application layout
+  add the gem to your Gemfile, then add this to your application layout
 
   <script src="/locale/<%= I18n.locale %>.js"></script>
 
@@ -35,6 +28,14 @@ TODO: Description
 
   I18n.t('foo', {foo: 'bar'})
   => 'bar test'
+
+== Requirements
+
+== Install
+  
+  Add to your gemfile
+
+  gem 'locale_js'
 
 == Copyright
 

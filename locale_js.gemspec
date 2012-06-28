@@ -4,7 +4,7 @@ require File.expand_path('../lib/locale_js/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "locale_js"
-  gem.version       = LocaleJS::VERSION
+  gem.version       = LocaleJs::VERSION
   gem.summary       = %q{Make Rails i18n available in javascript}
   gem.description   = %q{Make Rails i18n available in javascript}
   gem.license       = "MIT"

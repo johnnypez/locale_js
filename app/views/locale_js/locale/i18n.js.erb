@@ -1,0 +1,27 @@
+!function(exports){
+  var locale = <%=raw @locale.to_json %>;
+
+  function get_key(key, context){
+    var path = key.split('.'), k = null;
+    while(k = path.shift()){
+      if(context.hasOwnProperty(k)){
+        context = context[k];
+      }
+      else{
+        throw Error('Translation missing: ' + key);
+      }
+    }
+    return context;
+  }
+
+  exports.I18n = {
+    t: function(key, context){
+      var str = get_key(key, locale);
+      for(key in context){
+        str = str.replace("%{"+key+"}", context[key]);
+      }
+      return str;
+    }
+  }
+
+}(window);

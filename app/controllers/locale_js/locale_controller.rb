@@ -1,4 +1,4 @@
-class LocaleController < ApplicationController
+class LocaleJs::LocaleController < ApplicationController
   
   # remember to add the locales route
   # map.connect '/locale/:action.:format', :controller => :locale

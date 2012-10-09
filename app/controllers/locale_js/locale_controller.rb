@@ -17,7 +17,7 @@ class LocaleJs::LocaleController < ApplicationController
   
   private
   def generate_locale(locale)
-    expires(30.days.from_now)
+    expires_in(30.days)
     I18n.locale = locale
     # initialize i18n
     I18n.translate :hello

@@ -22,7 +22,7 @@ class LocaleJs::LocaleController < ApplicationController
     # initialize i18n
     I18n.translate :hello
     @locale = I18n.backend.send(:translations)[I18n.locale]
-    render :template => 'locale/i18n.js.erb'
+    render :partial => 'locale/i18n', :formats => [:js]
   end
   
   def action_missing(action)
